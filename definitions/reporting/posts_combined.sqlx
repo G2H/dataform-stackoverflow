@@ -1,0 +1,46 @@
+config {
+  type: "table",
+  schema: "reporting",
+  tags: ["daily"],
+  description: "Combine both questions and answers into a single posts_all table",
+  columns: {
+    post_id: `A unique identifier for a post`,
+    created_at: `The time the post was created`,
+    type: `The post type: question or answer`,
+    title: `The title of the post`,
+    body: `The content in the body of the post`
+  },
+
+  
+  bigquery: {
+    partitionBy: "date(created_at)"
+  },
+  assertions: {
+    uniqueKey: ["post_id"],
+    nonNull: ["post_id", "created_at"]
+  }
+}
+
+
+select
+  post_id,
+  created_at,
+  type,
+  title,
+  body,
+  owner_user_id,
+  parent_id
+from
+  ${ref("stg_posts_answers")}
+union all
+select
+  post_id,
+  created_at,
+  type,
+  title,
+  body,
+  owner_user_id,
+  parent_id
+from
+  ${ref("stg_posts_questions")}
+

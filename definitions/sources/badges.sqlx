@@ -1,0 +1,7 @@
+config {
+  type: "declaration",
+  database: "dataform-dogfood-shared",
+  schema: "stackoverflow",
+  name: "badges",
+  description: "raw badges table"
+}

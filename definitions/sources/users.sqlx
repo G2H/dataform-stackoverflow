@@ -1,0 +1,7 @@
+config {
+  type: "declaration",
+  database: "dataform-dogfood-shared",
+  schema: "stackoverflow",
+  name: "users",
+  description: "raw users table"
+}
