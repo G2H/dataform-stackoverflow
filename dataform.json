@@ -3,5 +3,5 @@
     "assertionSchema": "dataform_stackoverflow_assertions",
     "warehouse": "bigquery",
     "defaultDatabase": "dataform-dogfood-shared",
-    "defaultLocation": "US"
+    "defaultLocation": "EU"
 }
