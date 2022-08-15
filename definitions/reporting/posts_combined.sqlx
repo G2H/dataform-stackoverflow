@@ -1,7 +1,7 @@
 config {
   type: "table",
   schema: "reporting",
-  tags: ["daily2"],
+  tags: ["daily"],
   description: "Combine both questions and answers into a single posts_all table",
   columns: {
     post_id: `A unique identifier for a post`,
