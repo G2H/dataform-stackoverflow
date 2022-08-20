@@ -1,0 +1,9 @@
+config {
+  type: "table"
+}
+
+SELECT
+  fruit,
+  SUM(count) as count
+FROM ${ref("crosbie-source")}
+GROUP BY 1
