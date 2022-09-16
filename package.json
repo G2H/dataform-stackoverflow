@@ -1,4 +1,5 @@
 {
+    "name": "dataform-stackoverflow",
     "dependencies": {
         "@dataform/core": "2.0.0-beta.1"
     }
