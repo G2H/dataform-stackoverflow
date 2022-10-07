@@ -1,7 +1,6 @@
 config {
   type: "declaration",
-  database: "dataform-dogfood-shared",
+  database: "bigquery-public-data",
   schema: "stackoverflow",
-  name: "posts_questions",
-  description: "raw posts_questions table"
+  name: "posts_questions"
 }
