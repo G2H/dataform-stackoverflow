@@ -1,0 +1,3 @@
+config { type: "assertion" }
+
+SELECT age FROM ${ref('user_stats_2')} WHERE age IS NULL
