@@ -1,4 +1,4 @@
-config {type: "table"}
+config {type: "operations"}
 
 select
   stg_users.user_id,
