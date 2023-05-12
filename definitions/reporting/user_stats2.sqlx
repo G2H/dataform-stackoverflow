@@ -1,3 +1,0 @@
-config { type: "view" }
-
-select * from ${ref("stg_users")} limit 100
