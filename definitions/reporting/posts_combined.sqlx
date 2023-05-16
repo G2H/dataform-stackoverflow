@@ -23,7 +23,6 @@ select
   created_at,
   type,
   title,
-  body,
   owner_user_id,
   parent_id
 from
@@ -34,7 +33,6 @@ select
   created_at,
   type,
   title,
-  body,
   owner_user_id,
   parent_id
 from
