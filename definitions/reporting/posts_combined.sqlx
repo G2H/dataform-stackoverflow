@@ -1,5 +1,5 @@
 config {
-  type: "table",
+  type: "view",
   schema: "reporting",
   tags: ["daily"],
   description: "Combine both questions and answers into a single posts_all table",
@@ -11,10 +11,6 @@ config {
     body: `The content in the body of the post`
   },
 
-  
-  bigquery: {
-    partitionBy: "date(created_at)"
-  },
   assertions: {
     uniqueKey: ["post_id"],
     nonNull: ["post_id", "created_at"]
