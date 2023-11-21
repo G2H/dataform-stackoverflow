@@ -28,7 +28,6 @@ select
   stg_users.age,
   ${common.ageBucket("stg_users.age")} as age_bucket,
   stg_users.creation_date,
-  stg_users.user_tenure,
   count(distinct stg_badges.badge_id) as badge_count,
   count(distinct posts_all.post_id) as questions_and_answer_count,
   count(distinct if(type="question", posts_all.post_id, null)) as question_count,
@@ -44,4 +43,4 @@ from
   left join ${ref("posts_combined")} as posts_all
     on stg_users.user_id = posts_all.owner_user_id
 group by
-  1,2,3,4,5
+  1,2,3,4
