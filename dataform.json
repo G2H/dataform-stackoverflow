@@ -1,7 +1,7 @@
 {
-    "defaultSchema": "dataform_stackoverflow",
+    "defaultSchema": "dataform_stackoverflow_vikram",
     "assertionSchema": "dataform_stackoverflow_assertions",
     "warehouse": "bigquery",
-    "defaultDatabase": "dataform-dogfood-shared",
-    "defaultLocation": "US"
+    "defaultDatabase": "cloud-dataform-testing",
+    "defaultLocation": "europe-west3"
 }
