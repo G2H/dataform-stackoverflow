@@ -1,0 +1,42 @@
+config {
+    type: "table"
+}
+
+SELECT
+  stg_users.user_id,
+  stg_users.age,
+  ${common.ageBucket("stg_users.age")} AS age_bucket,
+  stg_users.creation_date,
+  stg_users.user_tenure,
+  COUNT(DISTINCT stg_badges.badge_id) AS badge_count,
+  COUNT(DISTINCT posts_all.post_id) AS questions_and_answer_count,
+  COUNT(DISTINCT
+  IF
+    (type="question", posts_all.post_id, NULL)) AS question_count,
+  COUNT(DISTINCT
+  IF
+    (type="answer", posts_all.post_id, NULL)) AS answer_count,
+  MAX(stg_badges.award_timestamp) AS last_badge_received_at,
+  MAX(posts_all.created_at) AS last_posted_at,
+  MAX(
+  IF
+    (type="question", posts_all.created_at, NULL)) AS last_question_posted_at,
+  MAX(
+  IF
+    (type="answer", posts_all.created_at, NULL)) AS last_answer_posted_at
+FROM
+  ${ref("stg_users")} AS stg_users
+LEFT JOIN
+  ${ref("stg_badges")} AS stg_badges
+ON
+  stg_users.user_id = stg_badges.user_id
+LEFT JOIN
+  ${ref("posts_combined")} AS posts_all
+ON
+  stg_users.user_id = posts_all.owner_user_id
+GROUP BY
+  1,
+  2,
+  3,
+  4,
+  5

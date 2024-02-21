@@ -13,6 +13,11 @@ function ageBucket(age) {
           end`;
 }
 
+
+function createTable(name, columns) {
+  return `CREATE OR REPLACE`;
+}
+
 module.exports = {
   ageBucket
 };
