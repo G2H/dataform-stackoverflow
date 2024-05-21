@@ -2,5 +2,6 @@ config {
   type: "declaration",
   database: "bigquery-public-data",
   schema: "stackoverflow",
-  name: "posts_questions"
+  name: "posts_questions",
+  location: "US"
 }
