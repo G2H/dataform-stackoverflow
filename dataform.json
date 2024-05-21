@@ -3,5 +3,5 @@
     "assertionSchema": "dataform_stackoverflow_assertions",
     "warehouse": "bigquery",
     "defaultDatabase": "alvaro-gallego-sandbox-01",
-    "defaultLocation": "europe-west1"
+    "defaultLocation": "US"
 }
