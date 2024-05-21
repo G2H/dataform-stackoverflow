@@ -2,6 +2,5 @@ config {
   type: "declaration",
   database: "bigquery-public-data",
   schema: "stackoverflow",
-  name: "badges",
-  location: "US"
+  name: "badges"
 }
