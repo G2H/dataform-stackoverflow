@@ -11,3 +11,5 @@ select
   user_id
 from
   ${ref("badges")}
+
+limit 100
