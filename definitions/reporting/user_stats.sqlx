@@ -45,3 +45,5 @@ from
     on stg_users.user_id = posts_all.owner_user_id
 group by
   1,2,3,4,5
+
+
