@@ -1,6 +1,5 @@
 config {
   type: "view",
-  schema: "reporting",
   tags: ["daily", "reporting"],
   description: "Create a summary table for all users including statistics on questions, answeers and badges received.",
   columns: {
