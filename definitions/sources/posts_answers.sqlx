@@ -1,6 +1,6 @@
 config {
   type: "declaration",
-  database: "bigquery-public-data",
-  schema: "stackoverflow",
+  database: "gauravbose-189-202207222040400",
+  schema: "stack_overflow",
   name: "posts_answers"
 }

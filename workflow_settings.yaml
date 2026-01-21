@@ -1,5 +1,5 @@
 dataformCoreVersion: 3.0.0
 defaultLocation: US
-defaultProject: dataform-dogfood-shared
-defaultDataset: dataform_stackoverflow
+defaultProject: gauravbose-189-202207222040400
+defaultDataset: staging
 defaultAssertionDataset: dataform_stackoverflow_assertions

@@ -1,0 +1,15 @@
+config {
+  type: "view",
+  schema: "staging",
+  description: "Cleaned version of stackoverflow.votes table"
+}
+
+select
+  post_id,
+  creation_date,
+  count(vote_type_id) as distinct_votes
+from
+  ${ref("votes")}
+  group by post_id, creation_date
+  having count(vote_type_id) > 1
+  limit 100

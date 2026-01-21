@@ -2,5 +2,5 @@ config {
   type: "declaration",
   database: "gauravbose-189-202207222040400",
   schema: "stack_overflow",
-  name: "users"
+  name: "votes"
 }

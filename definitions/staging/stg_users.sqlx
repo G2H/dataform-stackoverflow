@@ -1,7 +1,7 @@
 config {
   type: "view",
   schema: "staging",
-  description: "Cleaned version of stackoverflow.users table"
+  description: "Cleaned version of stackoverflow.votes_test table"
 }
 
 select
