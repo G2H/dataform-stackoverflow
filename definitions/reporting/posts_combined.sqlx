@@ -1,5 +1,5 @@
 config {
-  type: "view",
+  type: "incremental",
   schema: "reporting",
   tags: ["daily"],
   description: "Combine both questions and answers into a single posts_all table",
@@ -40,3 +40,7 @@ select
 from
   ${ref("stg_posts_questions")}
 
+${when(incremental(), `WHERE created_at > 0`) }
+
+
+limit 100
